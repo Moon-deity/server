@@ -10,7 +10,7 @@ const roadPath = [
     [77.34, 28.62], [77.36, 28.63], [77.38, 28.64], [77.4, 28.65]
 ];
 
-// Bus state
+// Bus state 
 let busPosition = 0; // Index in the roadPath
 let busDirection = 1; // 1 for forward, -1 for backward
 const busSpeed = 0.001; // How much to increment position each update - reduced for realistic movement

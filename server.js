@@ -16,7 +16,7 @@ const io = new Server(server, {
     }
 });
 
-const defaultDataSources = [];
+const defaultDataSources = []; 
 const dataSources = new Map();
 
 const loadDataSources = async () => {
@@ -47,6 +47,8 @@ const fetchDataFromSource = async (source) => {
         return { error: `Failed to fetch data from ${source.name}` };
     }
 };
+
+console.log(process.env.MONGODB_URI)
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/astrikos', {
@@ -190,6 +192,7 @@ io.on('connection', (socket) => {
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
     console.log(`Socket.io server running on port ${PORT}`);
+    console.log(process.env.MONGODB_URI)
     console.log(`Using dark theme for UI`);
 });
 
