@@ -192,7 +192,6 @@ io.on('connection', (socket) => {
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
     console.log(`Socket.io server running on port ${PORT}`);
-    console.log(process.env.MONGODB_URI)
     console.log(`Using dark theme for UI`);
 });
 
