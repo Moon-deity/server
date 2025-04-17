@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import mongoose from 'mongoose';
 import { DataSource } from './lib/models.js';
+import "dotenv/config"
 
 const app = express();
 const server = createServer(app);
